@@ -1,0 +1,16 @@
+#define waterlevelPower 12 //water level pin digital
+#define waterlevelPin A0 //water level pin analog
+
+void setup() {
+  Serial.begin(9600);
+  pinMode(waterlevelPower, OUTPUT);
+  digitalWrite(waterlevelPower, LOW);
+}
+void loop() {
+  value = analogRead(waterlevelPin); //reads the analog pin
+  
+  Serial.print("WATER LEVEL  : "); 
+  Serial.println(value); //prints the value of the water level
+
+  int value = analogRead(waterlevelPin);
+}
